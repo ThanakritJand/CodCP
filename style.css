@@ -14,7 +14,6 @@ img {
   max-width: 100%;
   vertical-align: middle;
   height: auto;
-  
 }
 
 /* navbar */
@@ -23,18 +22,25 @@ img {
   height: 84px;
   display: flex;
   align-items: center;
-}
-.container {
+  justify-content: center;
+
+  .container {
   display: flex;
   align-items: center;
   font-size: 16px;
   height: 84px;
+
+  .logo {
+    order: -1;
+    margin-inline: 2rem 1rem;
+  }
 }
+}
+
 .nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
 }
 /* left */
 .left {
@@ -66,6 +72,14 @@ img {
   gap: 16.625px;
   align-items: center;
   font-size: 16px;
+
+  .star-2 {
+    display: none;
+  }
+
+  .star-1 {
+    display: block;
+  }
 
   li {
     list-style: none;
@@ -349,7 +363,7 @@ img {
   justify-content: space-between;
   gap: 1.5rem;
 }
-.g-e-isLarge{
+.g-e-isLarge {
   display: flex;
   flex: 1 1 60%;
   flex-direction: column;
@@ -358,7 +372,7 @@ img {
   position: relative;
   overflow: hidden;
 }
-.g-e-isSmall{
+.g-e-isSmall {
   display: flex;
   flex: 1 1 30%;
   flex-direction: column;
@@ -455,7 +469,8 @@ img {
   flex-direction: column;
   gap: 0.5rem;
 }
-.g-e-isLarge .btn-small,.btn-card .btn-small {
+.g-e-isLarge .btn-small,
+.btn-card .btn-small {
   background-color: rgb(0, 120, 214);
   border: 1px solid rgb(0, 120, 214);
   color: #fff;
@@ -473,14 +488,14 @@ img {
 .btn-card .btn-small:hover {
   background-color: rgba(0, 121, 214, 0.32);
 }
-.un-btn{
+.un-btn {
   display: inline-block;
   padding: 0;
   color: #fff; /* ตัวอย่างสี */
   text-decoration: none;
   border-bottom: 1px solid currentColor; /* เส้นใต้พอดีกับตัวอักษร */
-  cursor: pointer;  
-  font-weight: 600  ;
+  cursor: pointer;
+  font-weight: 600;
   font-size: 1.1rem;
   font-weight: normal;
   white-space: nowrap;
@@ -640,7 +655,7 @@ img {
     margin-left: 106.45px;
     margin-right: 106.463px;
     padding: 3rem 0;
-    flex: 1 1 calc(50% - 20px); 
+    flex: 1 1 calc(50% - 20px);
 
     .group-text-benz {
       margin: 0 auto;
@@ -813,12 +828,11 @@ footer {
   }
 
   .last-footer {
-    margin: 0 100.8px;
     display: flex;
     justify-content: space-between;
-    padding: 2rem 0;
+    padding: 2rem 1rem;
     border-top: 1px solid #696969;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
   }
 
   .last-footer .foot-left ul {
@@ -834,7 +848,6 @@ footer {
   }
 
   .last-footer .foot-right ul {
-    margin-right: 1.5rem;
     list-style: none;
     display: flex;
     justify-content: space-around;
@@ -1036,24 +1049,58 @@ footer {
   }
 } */
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 500px) {
   header {
     width: 100vw;
 
     .navbar {
+      padding: 0 2rem;
       .container {
-        width: auto;
+        width: 100%;
+
+        .logo {
+          display: flex;
+          margin-inline: auto;
+        }
 
         .hamburger {
           display: block;
         }
 
+        .right {
+
+          margin-left: 16.625px;
+
+          .search {
+            display: none;
+          }
+
+          .star-2 {
+            display: none;
+          }
+
+
+
+        }
+
+
+        .left {
+          display: none;
+        }
+
+        .right {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+
         .nav {
-          width: auto;
+          width: 100%;
           justify-content: center;
           gap: 2rem;
 
           ul {
+            width: 100%;
             .nav-links {
               flex-direction: column;
               display: none;
@@ -1170,8 +1217,8 @@ footer {
   }
 
   .type-car {
-    .title{
-      h2{
+    .title {
+      h2 {
         font-size: 0.5rem;
       }
     }
@@ -1194,7 +1241,7 @@ footer {
 
       .news-card {
         padding: 0 10px;
-        img{
+        img {
         }
       }
     }
@@ -1244,12 +1291,11 @@ footer {
     .go-to-top {
       padding: 0.75rem 0;
 
-      .first-last-foot{
-        display: none ;
+      .first-last-foot {
+        display: none;
       }
       i {
         font-size: 28px;
-        
       }
     }
   }
