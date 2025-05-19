@@ -1061,6 +1061,7 @@ footer {
         .logo {
           display: flex;
           margin-inline: auto;
+          order: 0;
         }
 
         .hamburger {
