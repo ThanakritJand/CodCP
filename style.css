@@ -10,6 +10,12 @@ body {
   width: 100vw;
 }
 
+img {
+  max-width: 100%;
+  vertical-align: middle;
+  height: auto;
+}
+
 /* navbar */
 .navbar {
   background-color: #000;
@@ -886,7 +892,7 @@ footer {
 }
 
 /* Responsive */
-@media screen and (max-width: 768px) {
+/* @media screen and (max-width: 768px) {
   header {
     width: 100vw;
 
@@ -905,7 +911,7 @@ footer {
             .nav-links {
               flex-direction: column;
               display: none;
-              text-align: center; /* จัดกลาง */
+              text-align: center;
               padding: 10px 0; 
             }
           }
@@ -1075,7 +1081,7 @@ footer {
       }
     }
   }
-}
+} */
 
 @media screen and (max-width: 425px) {
   header {
